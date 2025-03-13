@@ -5,6 +5,7 @@ public class Task3 {
         byte num1;
         num1 = 6;
         double num2 = num1 * 6.6;
-        System.out.println(num2);
+        int num3 = (int) num2;
+        System.out.println(num3);
     }
 }
