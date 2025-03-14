@@ -11,7 +11,7 @@ public class Task7 {
         int min = scanner.nextInt();
         System.out.print("Введіть максимальне значення: ");
         int max = scanner.nextInt();
-        int randomInt = random.nextInt(max - min + 1) + min;
+        int randomInt = random.nextInt(min, max);
         String evenOdd = randomInt % 2 == 0 ? "парним" : "непарним";
         System.out.printf("Згенероване число: %d%nЧисло %d є %s%n", randomInt, randomInt, evenOdd);
         scanner.close();
