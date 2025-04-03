@@ -5,6 +5,6 @@ public class Person {
     int age;
 
     public String introduce(){
-        return "Hello, my neme is " + name + ", I am " + age + " years old.";
+        return "Hello, my name is " + name + ", I am " + age + " years old.";
     }
 }
