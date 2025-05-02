@@ -9,11 +9,11 @@ public class Main {
         washerDryer.dry();
 
         Appliance appliance = new WasherDryer("Samsung");
-        Appliance washable = new WasherDryer("Bosch");
-        Appliance dryable = new WasherDryer("Whirlpool");
+        Washable washable = new WasherDryer("Bosch");
+        Dryable dryable = new WasherDryer("Whirlpool");
 
         appliance.turnOn();
-        ((WasherDryer) washable).wash();
-        ((WasherDryer) dryable).dry();
+        washable.wash();
+        dryable.dry();
     }
 }
