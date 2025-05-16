@@ -1,11 +1,11 @@
 package Lab10_2;
 
 abstract class Notification implements Producer{
-    protected static String[] messages = new String[100];
-    protected static int messageCount = 0;
-    protected static int lastReadIndex = 0;
+    static String[] messages = new String[100];
+    static int messageCount = 0;
+    static int lastReadIndex = 0;
 
-    protected String type;
+    String type;
 
     public Notification(String type) {
         this.type = type;
