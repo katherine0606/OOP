@@ -9,6 +9,7 @@ public class Main {
     static final String[] products = {"1. Apple", "2. Banana", "3. Carrot", "4. Potato", "5. Milk", "6. Chicken"};
     static final List<String> cart = new ArrayList<>();
 
+
     public static void main(String[] args) {
         while (true) {
             showProducts(products);
