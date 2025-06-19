@@ -23,6 +23,7 @@ public class Main {
 
         if (timesCompounded <= 0){
             System.out.println("Кількість нарахувань відсотків на рік повинна бути більшою за 0.");
+            scanner.close();
             return;
         }
 
@@ -32,8 +33,19 @@ public class Main {
 
         scanner.close();
     }
+
     public static double calculateFutureValue(double principal, double monthlyDeposit, double annualRate, int years, int timesCompounded) {
+
         double futureValue = principal * Math.pow(1 + (annualRate / timesCompounded), timesCompounded * years);
-        return futureValue;
+
+        double monthlyRate = annualRate / 12.0;
+        int totalMonths = years * 12;
+        double depositFutureValue = 0;
+
+        for (int i = 0; i < totalMonths; i++) {
+            depositFutureValue += monthlyDeposit * Math.pow(1 + monthlyRate, totalMonths - i);
+        }
+
+        return futureValue + depositFutureValue;
     }
 }
